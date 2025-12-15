@@ -16,7 +16,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}")
 set(SRC_DIR "${CMAKE_SOURCE_DIR}/src")
 
 file(GLOB_RECURSE SOURCES "${SRC_DIR}/*.cpp")
-add_executable(${EXE_NAME} main.cpp)
+add_executable(${EXE_NAME} ${SOURCES} ${APP_ICON_RESOURCE_WINDOWS})
+
 
 include_directories(
     "${CMAKE_SOURCE_DIR}/include/"
