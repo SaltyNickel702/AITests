@@ -1,5 +1,8 @@
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required(VERSION 4.2.1)
 project(NumDetection LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(OpenCL REQUIRED)
 
@@ -24,9 +27,3 @@ include_directories(
 )
 
 target_link_libraries(${EXE_NAME} PRIVATE OpenCL::OpenCL)
-
-set_target_properties(${EXE_NAME} PROPERTIES
-    CXX_STANDARD 11
-    CXX_STANDARD_REQUIRED ON
-    CXX_EXTENSIONS OFF
-)
